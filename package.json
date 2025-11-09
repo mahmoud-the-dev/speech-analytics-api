@@ -1,0 +1,12 @@
+{
+  "name": "my-mock-server",
+  "version": "1.0.0",
+  "description": "Mockoon Server on DigitalOcean",
+  "main": "index.js",
+  "scripts": {
+    "start": "mockoon-cli start --data ./my-data-file.json --port $PORT --hostname 0.0.0.0"
+  },
+  "dependencies": {
+    "@mockoon/cli": "latest"
+  }
+}
