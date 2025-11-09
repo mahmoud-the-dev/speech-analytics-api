@@ -1,0 +1,192 @@
+{
+  "uuid": "d2329f21-8d23-49c4-8983-cd3462a2a23e",
+  "lastMigration": 33,
+  "name": "Speach analysis",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3002,
+  "hostname": "",
+  "routes": [
+    {
+      "uuid": "3a0c450e-7a6d-4166-a8de-86f5e0e6506c",
+      "documentation": "Returns dashboard charts data ",
+      "method": "get",
+      "endpoint": "dashboard",
+      "responses": [
+        {
+          "uuid": "0baff32f-e751-4208-981e-47211c6833e9",
+          "body": "{\n  \"data\": {\n    \"dashboard\": {\n      \"stats\": [\n        {\n          \"title\": \"Total Calls Received\",\n          \"value\": \"1,247\",\n          \"trend\": 15,\n          \"type\": \"calls\",\n          \"iconClasses\": \"text-purple-600 bg-purple-50\"\n        },\n        {\n          \"title\": \"Analyzed Today\",\n          \"value\": \"1,189\",\n          \"trend\": 8,\n          \"type\": \"analyzed\",\n          \"iconClasses\": \"text-blue-500 bg-blue-50\"\n        },\n        {\n          \"title\": \"Flagged for Review\",\n          \"value\": \"42\",\n          \"trend\": -12,\n          \"type\": \"flagged\",\n          \"iconClasses\": \"text-orange-500 bg-orange-50\"\n        },\n        {\n          \"title\": \"Needs Review\",\n          \"value\": \"15\",\n          \"trend\": -3,\n          \"type\": \"needs-review\",\n          \"iconClasses\": \"text-red-500 bg-red-50\"\n        }\n      ],\n      \"quickActions\": [\n        {\n          \"title\": \"Flagged\",\n          \"count\": 42,\n          \"description\": \"Review Now\",\n          \"type\": \"flagged\"\n        },\n        {\n          \"title\": \"Needs Review\",\n          \"count\": 15,\n          \"description\": \"Review Now\",\n          \"type\": \"needs-review\"\n        },\n        {\n          \"title\": \"Search calls\",\n          \"description\": \"Review customer service calls\",\n          \"type\": \"search\"\n        }\n      ]\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "1d128e00-b556-47b1-a011-ed7101a41d2a",
+      "documentation": "returns a list of calls",
+      "method": "get",
+      "endpoint": "calls",
+      "responses": [
+        {
+          "uuid": "f9533de5-4cb5-4cf6-ad07-c1c5c1da1055",
+          "body": "{\n  \"data\": {\n    \"calls\": {\n      \"data\": [\n        {\n          \"priority\": \"high\",\n          \"id\": \"CALL-2847\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"14:23\",\n          \"agent\": \"أحمد الخالدي\",\n          \"customer\": \"فاطمة السعيد\",\n          \"duration\": \"12:34\",\n          \"risk\": 85,\n          \"status\": \"Pending\",\n          \"reviewedBy\": \"—\"\n        },\n        {\n          \"priority\": \"medium\",\n          \"id\": \"CALL-2846\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"13:45\",\n          \"agent\": \"سارة المنصور\",\n          \"customer\": \"محمد الأحمد\",\n          \"duration\": \"08:12\",\n          \"risk\": 45,\n          \"status\": \"Reviewed\",\n          \"reviewedBy\": \"خالد العتيبي\"\n        },\n        {\n          \"priority\": \"high\",\n          \"id\": \"CALL-2845\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"12:30\",\n          \"agent\": \"عمر الشمري\",\n          \"customer\": \"نورة القحطاني\",\n          \"duration\": \"15:23\",\n          \"risk\": 92,\n          \"status\": \"Flagged\",\n          \"reviewedBy\": \"ليلى الدوسري\"\n        },\n        {\n          \"priority\": \"low\",\n          \"id\": \"CALL-2844\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"11:15\",\n          \"agent\": \"مريم العلي\",\n          \"customer\": \"يوسف الغامدي\",\n          \"duration\": \"06:45\",\n          \"risk\": 28,\n          \"status\": \"Reviewed\",\n          \"reviewedBy\": \"فيصل الحربي\"\n        }\n      ],\n      \"filters\": {\n        \"tabs\": [\n          {\n            \"label\": \"All\",\n            \"count\": 982,\n            \"active\": true\n          },\n          {\n            \"label\": \"Pending\",\n            \"count\": 42,\n            \"active\": false\n          },\n          {\n            \"label\": \"In Review\",\n            \"count\": 8,\n            \"active\": false\n          },\n          {\n            \"label\": \"Reviewed\",\n            \"count\": 189,\n            \"active\": false\n          },\n          {\n            \"label\": \"Flagged\",\n            \"count\": 15,\n            \"active\": false\n          }\n        ]\n      },\n      \"pagination\": {\n        \"total\": 982,\n        \"page\": 1,\n        \"limit\": 10,\n        \"pages\": 99\n      }\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9f844b4c-af35-4846-8c5c-cda21a534453",
+      "documentation": "returns specific call details",
+      "method": "get",
+      "endpoint": "calls/:id",
+      "responses": [
+        {
+          "uuid": "375ac7aa-9531-4396-92e7-6b38d644fa6e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b4c5d0e5-d209-4d8e-b3e4-3f4882aee56f",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "dashboard/recent-activity",
+      "responses": [
+        {
+          "uuid": "f48cc083-c208-4e3f-81c8-2e639a3e6b49",
+          "body": "{\n  \"data\": {\n    \"recentActivity\": [\n      {\n        \"user\": \"Sarah Johnson\",\n        \"action\": \"Reviewed\",\n        \"callId\": \"CALL-2847\",\n        \"time\": \"2 minutes ago\",\n        \"color\": \"bg-blue-500\",\n        \"callLink\": \"CALL-2847\"\n      },\n      {\n        \"user\": \"Mike Chen\",\n        \"action\": \"Flagged\",\n        \"callId\": \"CALL-2846\",\n        \"time\": \"5 minutes ago\",\n        \"color\": \"bg-red-500\",\n        \"callLink\": \"CALL-2846\"\n      },\n      {\n        \"user\": \"Emma Davis\",\n        \"action\": \"Reviewed\",\n        \"callId\": \"CALL-2845\",\n        \"time\": \"12 minutes ago\",\n        \"color\": \"bg-blue-500\",\n        \"callLink\": \"CALL-2845\"\n      },\n      {\n        \"user\": \"James Wilson\",\n        \"action\": \"Reviewed\",\n        \"callId\": \"CALL-2844\",\n        \"time\": \"18 minutes ago\",\n        \"color\": \"bg-blue-500\",\n        \"callLink\": \"CALL-2844\"\n      },\n      {\n        \"user\": \"Lisa Anderson\",\n        \"action\": \"Flagged\",\n        \"callId\": \"CALL-2843\",\n        \"time\": \"25 minutes ago\",\n        \"color\": \"bg-red-500\",\n        \"callLink\": \"CALL-2843\"\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "folders": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "3a0c450e-7a6d-4166-a8de-86f5e0e6506c"
+    },
+    {
+      "type": "route",
+      "uuid": "1d128e00-b556-47b1-a011-ed7101a41d2a"
+    },
+    {
+      "type": "route",
+      "uuid": "9f844b4c-af35-4846-8c5c-cda21a534453"
+    },
+    {
+      "type": "route",
+      "uuid": "b4c5d0e5-d209-4d8e-b3e4-3f4882aee56f"
+    }
+  ],
+  "callbacks": []
+}
