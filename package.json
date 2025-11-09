@@ -4,7 +4,7 @@
   "description": "Mockoon Server on DigitalOcean",
   "main": "index.js",
   "scripts": {
-    "start": "mockoon-cli start --data ./my-data-file.json --port $PORT --hostname 0.0.0.0"
+    "start": "mockoon-cli start --data ./speach-analysis.json --port $PORT --hostname 0.0.0.0"
   },
   "dependencies": {
     "@mockoon/cli": "latest"
