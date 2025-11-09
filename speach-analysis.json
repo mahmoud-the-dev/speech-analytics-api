@@ -1,11 +1,11 @@
 {
   "uuid": "d2329f21-8d23-49c4-8983-cd3462a2a23e",
-  "lastMigration": 33,
+  "lastMigration": 24,
   "name": "Speach analysis",
   "endpointPrefix": "",
   "latency": 0,
   "port": 3002,
-  "hostname": "",
+  "hostname": "0.0.0.0",
   "routes": [
     {
       "uuid": "3a0c450e-7a6d-4166-a8de-86f5e0e6506c",
@@ -28,15 +28,11 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
+          "default": true
         }
       ],
-      "responseMode": null,
-      "type": "http",
-      "streamingMode": null,
-      "streamingInterval": 0
+      "enabled": true,
+      "responseMode": null
     },
     {
       "uuid": "1d128e00-b556-47b1-a011-ed7101a41d2a",
@@ -46,7 +42,7 @@
       "responses": [
         {
           "uuid": "f9533de5-4cb5-4cf6-ad07-c1c5c1da1055",
-          "body": "{\n  \"data\": {\n    \"calls\": {\n      \"data\": [\n        {\n          \"priority\": \"high\",\n          \"id\": \"CALL-2847\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"14:23\",\n          \"agent\": \"أحمد الخالدي\",\n          \"customer\": \"فاطمة السعيد\",\n          \"duration\": \"12:34\",\n          \"risk\": 85,\n          \"status\": \"Pending\",\n          \"reviewedBy\": \"—\"\n        },\n        {\n          \"priority\": \"medium\",\n          \"id\": \"CALL-2846\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"13:45\",\n          \"agent\": \"سارة المنصور\",\n          \"customer\": \"محمد الأحمد\",\n          \"duration\": \"08:12\",\n          \"risk\": 45,\n          \"status\": \"Reviewed\",\n          \"reviewedBy\": \"خالد العتيبي\"\n        },\n        {\n          \"priority\": \"high\",\n          \"id\": \"CALL-2845\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"12:30\",\n          \"agent\": \"عمر الشمري\",\n          \"customer\": \"نورة القحطاني\",\n          \"duration\": \"15:23\",\n          \"risk\": 92,\n          \"status\": \"Flagged\",\n          \"reviewedBy\": \"ليلى الدوسري\"\n        },\n        {\n          \"priority\": \"low\",\n          \"id\": \"CALL-2844\",\n          \"date\": \"January 15, 2024\",\n          \"time\": \"11:15\",\n          \"agent\": \"مريم العلي\",\n          \"customer\": \"يوسف الغامدي\",\n          \"duration\": \"06:45\",\n          \"risk\": 28,\n          \"status\": \"Reviewed\",\n          \"reviewedBy\": \"فيصل الحربي\"\n        }\n      ],\n      \"filters\": {\n        \"tabs\": [\n          {\n            \"label\": \"All\",\n            \"count\": 982,\n            \"active\": true\n          },\n          {\n            \"label\": \"Pending\",\n            \"count\": 42,\n            \"active\": false\n          },\n          {\n            \"label\": \"In Review\",\n            \"count\": 8,\n            \"active\": false\n          },\n          {\n            \"label\": \"Reviewed\",\n            \"count\": 189,\n            \"active\": false\n          },\n          {\n            \"label\": \"Flagged\",\n            \"count\": 15,\n            \"active\": false\n          }\n        ]\n      },\n      \"pagination\": {\n        \"total\": 982,\n        \"page\": 1,\n        \"limit\": 10,\n        \"pages\": 99\n      }\n    }\n  }\n}",
+          "body": "{\r\n\t\"data\": {\r\n\t\t\"calls\": {\r\n\t\t\t\"data\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"priority\": \"high\",\r\n\t\t\t\t\t\"id\": \"CALL-2847\",\r\n\t\t\t\t\t\"date\": \"January 15, 2024\",\r\n\t\t\t\t\t\"time\": \"14:23\",\r\n\t\t\t\t\t\"agent\": \"أحمد الخالدي\",\r\n\t\t\t\t\t\"customer\": \"فاطمة السعيد\",\r\n\t\t\t\t\t\"duration\": \"12:34\",\r\n\t\t\t\t\t\"risk\": 85,\r\n\t\t\t\t\t\"status\": \"Pending\",\r\n\t\t\t\t\t\"status_ar\": \"قيد الانتظار\",\r\n\t\t\t\t\t\"reviewedBy\": \"—\"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"priority\": \"medium\",\r\n\t\t\t\t\t\"id\": \"CALL-2846\",\r\n\t\t\t\t\t\"date\": \"January 15, 2024\",\r\n\t\t\t\t\t\"time\": \"13:45\",\r\n\t\t\t\t\t\"agent\": \"سارة المنصور\",\r\n\t\t\t\t\t\"customer\": \"محمد الأحمد\",\r\n\t\t\t\t\t\"duration\": \"08:12\",\r\n\t\t\t\t\t\"risk\": 45,\r\n\t\t\t\t\t\"status\": \"Reviewed\",\r\n\t\t\t\t\t\"status_ar\": \"تمت المراجعة\",\r\n\t\t\t\t\t\"reviewedBy\": \"خالد العتيبي\"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"priority\": \"high\",\r\n\t\t\t\t\t\"id\": \"CALL-2845\",\r\n\t\t\t\t\t\"date\": \"January 15, 2024\",\r\n\t\t\t\t\t\"time\": \"12:30\",\r\n\t\t\t\t\t\"agent\": \"عمر الشمري\",\r\n\t\t\t\t\t\"customer\": \"نورة القحطاني\",\r\n\t\t\t\t\t\"duration\": \"15:23\",\r\n\t\t\t\t\t\"risk\": 92,\r\n\t\t\t\t\t\"status\": \"Flagged\",\r\n\t\t\t\t\t\"status_ar\": \"تم وضع علامة\",\r\n\t\t\t\t\t\"reviewedBy\": \"ليلى الدوسري\"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"priority\": \"low\",\r\n\t\t\t\t\t\"id\": \"CALL-2844\",\r\n\t\t\t\t\t\"date\": \"January 15, 2024\",\r\n\t\t\t\t\t\"time\": \"11:15\",\r\n\t\t\t\t\t\"agent\": \"مريم العلي\",\r\n\t\t\t\t\t\"customer\": \"يوسف الغامدي\",\r\n\t\t\t\t\t\"duration\": \"06:45\",\r\n\t\t\t\t\t\"risk\": 28,\r\n\t\t\t\t\t\"status\": \"Reviewed\",\r\n\t\t\t\t\t\"status_ar\": \"تمت المراجعة\",\r\n\t\t\t\t\t\"reviewedBy\": \"فيصل الحربي\"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t\"filters\": {\r\n\t\t\t\t\"tabs\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"label\": \"All\",\r\n\t\t\t\t\t\t\"label_ar\": \"الكل\",\r\n\t\t\t\t\t\t\"count\": 982,\r\n\t\t\t\t\t\t\"active\": true\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"label\": \"Pending\",\r\n\t\t\t\t\t\t\"label_ar\": \"قيد الانتظار\",\r\n\t\t\t\t\t\t\"count\": 42,\r\n\t\t\t\t\t\t\"active\": false\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"label\": \"In Review\",\r\n\t\t\t\t\t\t\"label_ar\": \"قيد المراجعة\",\r\n\t\t\t\t\t\t\"count\": 8,\r\n\t\t\t\t\t\t\"active\": false\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"label\": \"Reviewed\",\r\n\t\t\t\t\t\t\"label_ar\": \"تمت المراجعة\",\r\n\t\t\t\t\t\t\"count\": 189,\r\n\t\t\t\t\t\t\"active\": false\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"label\": \"Flagged\",\r\n\t\t\t\t\t\t\"label_ar\": \"تم وضع علامة\",\r\n\t\t\t\t\t\t\"count\": 15,\r\n\t\t\t\t\t\t\"active\": false\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"pagination\": {\r\n\t\t\t\t\"total\": 982,\r\n\t\t\t\t\"page\": 1,\r\n\t\t\t\t\"limit\": 10,\r\n\t\t\t\t\"pages\": 99\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -64,15 +60,11 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
+          "default": true
         }
       ],
-      "responseMode": null,
-      "type": "http",
-      "streamingMode": null,
-      "streamingInterval": 0
+      "enabled": true,
+      "responseMode": null
     },
     {
       "uuid": "9f844b4c-af35-4846-8c5c-cda21a534453",
@@ -95,15 +87,11 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
+          "default": true
         }
       ],
-      "responseMode": null,
-      "type": "http",
-      "streamingMode": null,
-      "streamingInterval": 0
+      "enabled": true,
+      "responseMode": null
     },
     {
       "uuid": "b4c5d0e5-d209-4d8e-b3e4-3f4882aee56f",
@@ -126,15 +114,11 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
+          "default": true
         }
       ],
-      "responseMode": null,
-      "type": "http",
-      "streamingMode": null,
-      "streamingInterval": 0
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "proxyMode": false,
@@ -168,25 +152,5 @@
       "value": ""
     }
   ],
-  "data": [],
-  "folders": [],
-  "rootChildren": [
-    {
-      "type": "route",
-      "uuid": "3a0c450e-7a6d-4166-a8de-86f5e0e6506c"
-    },
-    {
-      "type": "route",
-      "uuid": "1d128e00-b556-47b1-a011-ed7101a41d2a"
-    },
-    {
-      "type": "route",
-      "uuid": "9f844b4c-af35-4846-8c5c-cda21a534453"
-    },
-    {
-      "type": "route",
-      "uuid": "b4c5d0e5-d209-4d8e-b3e4-3f4882aee56f"
-    }
-  ],
-  "callbacks": []
+  "data": []
 }
